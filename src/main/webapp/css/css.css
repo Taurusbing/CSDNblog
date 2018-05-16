@@ -1,0 +1,300 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+html body{
+	width: 100%;
+	height: 100%;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.max-content{
+	background-color: #e4e0e0;
+}
+.wrapper{
+	width: 100%;
+	border-bottom: 1px solid #d8cccc;
+}
+.small-navigator{
+	width: 80%;
+	margin: 0 auto;
+}
+.nav-list{
+	width: 100%;
+	overflow: hidden;
+}
+.nav-list .nav-item{
+	float: left;
+	border-bottom: 2px solid transparent;
+	transition: all 0.3s ease;
+}
+.nav-list .nav-item-active{
+	border-bottom: 2px solid #ec6a74;
+}
+.nav-item a{
+	display: inline-block;
+	padding: 10px;
+	color: #2d2d2d;
+	font-size: 14px;
+}
+
+/*theme*/
+
+.theme-navigator{
+	width: 80%;
+	height: 220px;
+	margin: 10px auto;
+	border-radius: 2px;
+	border: 1px solid #d8cccc;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.head-portrait{
+	width: 150px;
+	height: 200px;
+	margin: 10px;
+	float: left;
+}
+.head-portrait a{
+	display: inline-block;
+}
+.head-portrait a img{
+	vertical-align: middle;
+}
+.head-portrait .star{
+	margin-top: 10px;
+	float: left;
+	width: 50%;
+	height: 50px;
+}
+.star p{
+	font-size: 12px;
+	line-height: 16px;
+	color: #2d2d2d;
+	text-align: center;
+	font-weight: bold;
+}
+.first-star p{
+	border-right: 1px solid #d8cccc;
+}
+/*message*/
+.message{
+	width: 84%;
+	float: left;
+	border-bottom: 1px solid #d8cccc;
+	position: relative;
+}
+.message .user-name{
+	margin-top: 30px;
+	font-size: 24px;
+}
+.message .message-list{
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+.message .message-list span{
+	float: left;
+	color: #e2e2e2;
+	padding-top: 4px;
+}
+.message-list .message-item{
+	float: left;
+}
+.message-list .message-item span{
+	padding: 5px;
+	color: #f95864;
+	font-size: 14px;
+}
+.message-list .active span{
+	color: #2d2d2d;
+}
+
+.revise-message {
+	font-size: 15px;
+	color: #28b9f5;
+	font-weight: bold;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	padding: 5px;
+	cursor: pointer;
+}
+/*资料下部分*/
+.personal{
+	width: 84%;
+	float: left;
+}
+.personal .news{
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #2d2d2d;
+	margin: 10px 5px;
+}
+.personal .content{
+	margin: 10px 0;
+}
+.content span {
+	float: left;
+	margin: 0 5px;
+}
+.content .recharge{
+	padding: 4px;
+	background-color: #ec6a74;
+	font-size: 12px;
+	color: #fff;
+	border-radius: 4px;
+}
+/*<!-- 弹出框 -->*/
+.message-box{
+	width: 40%;
+	height: 520px;
+	margin: 0 auto;
+	border: 1px solid #d8cccc;
+	border-radius: 4px;
+	display: none;
+	position: fixed;
+	top: 50px;
+	left: 30%;
+	background-color: #fff;
+}
+.message-box form{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.message-box .title{
+	font-size: 18px;
+	color: #2d2d2d;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #d8cccc;
+	margin-left: 10px;
+}
+.user-box{
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #d8cccc;
+	margin: 10px 5px;
+	background-color: #e2dbdb;
+	border-radius: 4px;
+}
+.user-box span{
+	font-size: 18px;
+	color: #2d2d2d;
+}
+.message-class{
+	float: left; 
+}
+.message-class span{
+	margin-left: 5px;
+	font-size: 14px;
+	color: #2d2d2d;
+	font-weight: bold;
+}
+.message-class input{
+	height: 30px;
+	line-height: 30px;
+	margin: 5px 5px;
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	border: 1px solid #d8cccc;
+	text-indent:10px;
+}
+.message-class .ture-name{
+	width: 100px;
+}
+.message-class .myself{
+	font-size: 14px;
+	color: #00b388;
+}
+.message-class .boy, .message-class .girl{
+	width: 18px;
+	height: 18px;
+}
+.message-sex{
+	height: 54px;
+	line-height: 54px;
+}
+.message-industru{
+	margin-top: 10px;
+	width: 100%;
+}
+.dropdown{
+	display: inline-block;
+	width: 200px;
+	height: 32px;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #2d2d2d;
+	outline: none;
+}
+.industry{
+	width: 200px;
+}
+.address{
+	width: 26%;
+	
+}
+.message-industru span{
+	margin-left: 25px;
+}
+.message-describe {
+	margin-top: 10px;
+	border-bottom: 1px solid #d8cccc;
+}
+.message-describe span{
+	display: inline-block;
+	margin: 0 5px 0 25px;
+	float: left;
+}
+.descrive-box{
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	border: 1px solid #d8cccc;
+}
+.message-describe .prompt{
+	font-size: 12px;
+	color: #dd5862;
+	float: right;
+	margin:5px 20px 5px 0;
+}
+.message-describe textarea{
+	resize:none;
+	padding-left: 10px;
+}
+.button{
+	width: 60px;
+	height: 30px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 4px;
+}
+.cancel{
+	position: absolute;
+	right: 120px;
+	bottom: 10px;
+	background-color: #d2d2d2;
+	
+}
+.save{
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+	background-color: #dd5862;
+}

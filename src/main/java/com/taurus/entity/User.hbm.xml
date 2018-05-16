@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-5-2 9:00:05 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.taurus.entity.User" table="t_user">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="account" type="java.lang.String">
+            <column name="account" />
+        </property>
+        <property name="Password" type="java.lang.String">
+            <column name="password" />
+        </property>
+        <property name="Pet_name" type="java.lang.String">
+            <column name="pet_name" />
+        </property>
+        <property name="Real_name" type="java.lang.String">
+            <column name="real_name" />
+        </property>
+        <property name="Job" type="java.lang.String">
+            <column name="job" />
+        </property>
+        <property name="Sex" type="int">
+            <column name="sex" />
+        </property>
+        <property name="Birthday" type="java.util.Date">
+            <column name="birthday" />
+        </property>
+        <many-to-one name="Trade" cascade="all" lazy="false" class="com.taurus.entity.Trade" fetch="join">
+            <column name="trade_id" />
+        </many-to-one>
+        <many-to-one name="Area" cascade="all" lazy="false"  class="com.taurus.entity.Area" fetch="join">
+            <column name="area_id" />
+        </many-to-one>
+        <property name="Resume" type="java.lang.String">
+            <column name="resume" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="phone" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="email" />
+        </property>
+        <property name="createdDate" type="java.sql.Timestamp" access="field">
+            <column name="created_date" />
+        </property>
+        <property name="isDel" type="int" access="field">
+            <column name="is_del" />
+        </property>
+        
+         <set name="blog" inverse="true" lazy="false">
+        	<key column="user_id"></key>
+			<one-to-many class="com.taurus.entity.Blog"/>        
+        </set>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,298 @@
+/*
+* @Author: MAXUP
+* @Date:   2018-04-27 09:07:23
+* @Last Modified by:   MAXUP
+* @Last Modified time: 2018-04-27 12:40:16
+*/
+@charset "UTF-8";
+/*css 初始化 */
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+    background-color: #fff;
+}
+fieldset, img, input, button { 			
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				
+}
+
+input {
+	outline: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+table {
+    border-collapse: collapse;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {				
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+/*公共类*/
+.w {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+
+/*main*/
+.main{
+	background: url(https://csdnimg.cn/passport/login-bg.png);
+    border-top: 1px solid #e9e9e9;
+     border-bottom: 1px solid #e9e9e9; 
+    font-size: 12px;
+}
+.cointainer{
+	padding: 48px 0 48px 0;
+
+    padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.wrapper-login{
+	margin: 0 auto;
+	overflow: hidden;
+}
+.login-banner{
+	float: left;
+	vertical-align: middle;
+    padding-right: 20px;
+    width: 58.333333333333336%;
+}
+.login-banner img{
+	display: block;
+    height: auto;
+    max-width: 100%;
+}
+.login-user{
+	float: right;
+	width: 41.66666666666667%;
+	height: 100%;
+	position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.login-part{
+	background: #fefefe;
+    border: 1px solid #d5dce5;
+    border-radius: 5px;
+}
+.login-part h3{
+	margin: 0;
+    position: relative;
+    font-size: 1.5em;
+    color: #4d5e73;
+    padding: 25px 30px 15px 30px;
+}
+.login-part .scan-qrcode{
+	position: absolute;
+    right: 20px;
+    top: 30px;
+    font-size: 12px;
+}
+/*登录框*/
+.login-part .user-info{
+	padding: 0 30px;
+}
+.login-part .user-info form{
+	margin: 0;
+    padding: 0;
+    padding-right: 8px;
+}
+.login-part .user-name,.login-part .pass-word{
+	background: #fff;
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    border: 1px solid #d5dce5;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-indent: 23px;
+    outline: 0;
+    font-size: 1.25em;
+    border-radius: 3px;
+}
+.password-function{
+	margin-top: 10px;
+    color: #4d5e73;
+    font-size: 1em;
+}
+.auto-login{
+	margin-right: 10px;
+    border: 1px solid #ccc;
+}
+.auto-signup{
+	font-weight: bold;
+}
+.forget-pwd{
+	display: inline-block;
+	width: 50%;
+	text-align: right;
+}
+/*login-btn*/
+.login-btn{
+    background: #c90a16;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-decoration: none;
+    clear: both;
+    width: 100%;
+    border: solid 1px #c90000;
+    border-radius: 3px;
+    box-shadow: 0 0 3px #fff inset;
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+.login-btn:hover{
+	background-color: #BA0813;
+}
+.placeholder-line{
+	background: #eee;
+    height: 1px;
+    margin-top: 40px;
+}
+/*三方登录*/
+.third-part{
+	padding: 20px 52px 21px 30px;
+}
+.third-part-grow{
+	padding: 43px 52px 45px 30px;
+}
+.third-part span{
+	display: inline-block;
+    font-size: 1.083em;
+    color: #666;
+    margin-bottom: 11px;
+}
+.third-part .icon{
+	display: inline-block;
+    background-image: url(../images/login-third-party-new.png);
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    width: 32px;
+    height: 32px;
+}
+.third-part .qq{
+	background-position: 0 0;
+}
+.third-part .sina{
+	background-position: -74px 0;
+}
+.third-part .baidu{
+	background-position: -112px 0;
+}
+.third-part .cc{
+	background-position: -150px 0;
+}
+.third-part .github{
+	background-position: -187px 0;
+}
+.third-part .sign-up{
+	background: none;
+}
+.register-now{
+	margin-top: 20px;
+}
+/*登录框*/
+
+/*注册*/
+ .sign-up-btn{
+ 	background-color: #42c02e;
+ 	border-color: transparent;
+ }
+ .sign-up-btn:hover{
+ 	background-color: #3DB922;
+ }
+/*注册*/

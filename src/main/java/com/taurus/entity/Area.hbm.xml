@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-5-2 9:11:23 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.taurus.entity.Area" table="t_area">
+        <id name="id" type="java.lang.Integer">
+            <column name="code_id" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <many-to-one name="parent" lazy="false" class="com.taurus.entity.Area" fetch="join">
+            <column name="parent_id" />
+        </many-to-one>
+<!--         <set name="childArea" inverse="true" lazy="false">
+            <key>
+                <column name="parent_id" />
+            </key>
+            <one-to-many class="com.taurus.entity.Area" />
+        </set> -->
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-5-2 9:48:56 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.taurus.entity.BlogTag" table="t_blog_tag">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="blog" lazy="false" cascade="all" class="com.taurus.entity.Blog" fetch="join">
+            <column name="blog_id" />
+        </many-to-one>
+        <many-to-one name="category" lazy="false" cascade="all" class="com.taurus.entity.Category" fetch="join">
+            <column name="category_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <!-- 主页展示 -->
+    <package name="Home" extends="struts-default">
+        <action name="home">
+        	<result>/pages/main.jsp</result>
+        </action>
+        <action name="blogShow" class="com.taurus.controller.HomeAction" method="findBlog">
+        </action>
+    </package>    
+    
+    
+    
+    
+	<!-- 登录注册跳转 -->
+    <package name="ResigetLogin" extends="struts-default">
+        <action name="add" class="com.taurus.controller.UserAction" method="add">
+            <result name="registerSuccess">/pages/login.jsp</result>
+            <result name="registerError">/pages/signup.jsp</result>
+        </action> 
+        <action name="login" class="com.taurus.controller.UserAction" method="login">
+            <result name="loginSuccess">/pages/main.jsp</result>
+            <result name="loginError">/pages/login.jsp</result>
+        </action>     
+    </package>
+    
+    
+    <!-- 用户信息操作 -->
+    <package name="User" extends="struts-default">
+        <action name="loadArea" class="com.taurus.controller.UserAction" method="findArea">
+        </action> 
+        <action name="loadTrade" class="com.taurus.controller.UserAction" method="getTrade">
+        </action> 
+        
+        <action name="information" class="com.taurus.controller.UserAction" method="informationShow">
+            <result name="success">/pages/information.jsp</result>
+        </action> 
+        
+        <action name="userUpdate" class="com.taurus.controller.UserAction" method="update">
+            <result name="success">/pages/information.jsp</result>
+        </action>
+    </package>
+    
+    
+    
+	
+	<!-- 博文页面跳转 -->
+	 <package name="Blog" extends="struts-default">
+	   <interceptors>
+       		<interceptor name="gologin" class="com.taurus.interceptor.LoginInterceptor"/>
+       </interceptors>
+       
+       <action name="goWrite" class="com.taurus.controller.BlogAction" method="goWrite">
+            <result name="success">/pages/write2.jsp</result>
+            <result name="error">/pages/login.jsp</result>
+            <interceptor-ref name="gologin"></interceptor-ref>
+        </action>
+	 
+	 
+        <!-- 写博客  -->
+        <action name="addBlog" class="com.taurus.controller.BlogAction" method="addBlog">
+            <result name="success" type="chain">myBlog</result>
+        </action> 
+        <!-- 跳转到博客详情页面 -->
+        <action name="details" class="com.taurus.controller.BlogAction" method="blogDetails">
+            <result name="success">/pages/Details.jsp</result>
+        </action>
+        
+        <action name="myBlog" class="com.taurus.controller.BlogAction" method="myCSDN">
+            <result name="success">/pages/myCSDN.jsp</result>
+        </action>
+        
+        
+        <!-- 显示评论 -->
+        <action name="comShow" class="com.taurus.controller.CommentAction" method="findComment">
+        </action>
+        
+        <!-- 博文评论模块 -->
+        <action name="commentAdd" class="com.taurus.controller.CommentAction" method="comAdd">
+            <result name="success" type="chain">details</result>
+            <result name="error">/pages/login.jsp</result>
+        </action>
+    </package>
+</struts>
